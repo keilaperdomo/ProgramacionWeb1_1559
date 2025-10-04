@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Keila Esmeralda Perdomo Hernández">
+    <title>Listas y Formularios</title>
+</head>
+<body>
+    <h1>Listas y Formularios</h1>
+    <h2>Listas</h2>
+
+    <!--Listas Desordenadas-->
+    <ul>
+        <!--li objeto o elemento de la lista-->
+        <li>Leche</li>
+        <li>Huevos</li>
+        <li>Carne</li>
+        <li>Pollo</li>
+        <li>Jamón</li>
+    </ul>
+
+    <!--Listas Ordenadas-->
+    <!--type cambia lo que antecede a la palabra-->
+    <!--start especifica en que numero quiere iniciar -->
+    <ol type="1" start="2">
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+        <li>Cuarto</li>
+        <li>Quinto</li>
+    </ol>
+
+    <!--Listas de Definiciones-->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de Marcado de Hipertexto</dd>
+        <dt>CSS</dt>
+        <dd>Hoja de Estilos de Cascada</dd>
+        <dt>JS</dt>
+        <dd>Java Script</dd>
+    </dl>
+    <hr>
+    <!--Listas Anidadas-->
+    <p>Desarrollo Web</p>
+    <ul>
+        <li>Frontend</li>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+            </ol>
+        <li>Backend</li>
+            <ol>
+                <li>NodeJS</li>
+                <li>MySQL</li>
+                <li>Debian</li>
+            </ol>
+    </ul>
+    <hr>
+    <!--FORMULARIOS-->
+    <p>Formulario de inicio de sesión</p>
+    <!--action va a referirse a una ruta o a un archivo donde el servidor va a saber como inciar de forma correcta o que le indique al usuario que hay alún error-->
+    <!--method peticiones http, le decimos como va a mandar la info del cliente al servidor-->
+    <!--Label va a darle una etiqueta o un titulo al campo de entrada-->
+    <!--input Campo de entrada donde van a poder poner info-->
+    <!--id relaciona la etiqueta (for) con el campo de entrada -->
+    <!--name se utiliza para procesar datos en el back-->
+    <!--placeholder va a agregar una pista extra para decirle al usuario lo que debe poner en el input-->
+    <!--required le indica al navegador que ese campo no puede quedar vacío, nos da una alerta-->
+    <form action="/inicio_sesion" method="post">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" placeholder="Introduce tu noombre de usuario" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Introduce tu contraseña">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <br>
+    <p>Formulario con campo de entrada de varias líneas</p>
+    <!--textarea va a permitir que el usuario agregue un texto de varias lineas y que se pueda extender-->
+    <!--rows filas cols columnas es para tamaño-->
+    <form action="/validacion.php" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" required placeholder="Introduce tu nombre">
+        <br>
+        <label for="opinion">Comentarios:</label>
+        <textarea name="opinion" id="opinion" rows="4" cols="40" placeholder="Tú opinión es importante"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p>Formularios con listas desplegables de opciones</p>
+    <!--todos los atributos van en minuscula-->
+    <!--select es para desplegar la lista-->
+    <form action="/seleccion_bebidas_postres" method="post">
+        <label for="bebidas">Bebidas:</label>
+        <select name="bebidas" id="bebidas">
+            <option value="limonada">Limonada</option>
+            <option value="fresada">Fresada</option>
+            <option value="cocacola">Coca Cola</option>
+            <option value="cafe">Cafe</option>
+            <option value="agua">Agua</option>
+        </select>
+        <br>
+        <label for="postres">Postres:</label>
+        <select name="postres" id="psotres">
+            <option value="pay_limon">Pay de limón</option>
+            <option value="crepa">Crepa</option>
+            <option value="pastel">Pastel</option>
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p>Formularios complejos con distintos campos de datos</p>
+    <!--fieldset nos permite separar las secciones del formulario-->
+    <!--legend un subtitulo de cada seccion-->
+    <form action="/datos_usuario" method="post">
+        <fieldset>
+            <legend>Nombre</legend>
+            <label for="nombre">Nombre(s):</label>
+            <input type="text" name="nombre" id="nombre" required>
+            <br>
+            <label for="apellido_paterno">Apellido Paterno:</label>
+            <input type="text" name="apellido_paterno" id="apellido_paterno" required>
+            <br>
+            <label for="apellido_materno">Apellido Materno:</label>
+            <input type="text" name="apellido_materno" id="apellido_materno" required>
+        </fieldset>
+        <fieldset>
+            <legend>Otros Datos</legend>
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+            <br>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" required>
+            <br>
+            <label for="numero_cuenta">Número de cuenta:</label>
+            <!--Longitud minima minlength y longitud máxima maxlength pero solo con tipo text-->
+            <input type="text" name="numero_cuenta" id="numero_cuenta" minlength="8" maxlength="9" placeholder="número cuenta UNAM" required>
+            <br>
+            <label for="email">Correo ELectrónico:</label>
+            <input type="email" name="email" id="email" required>
+        </fieldset>
+        <fieldset>
+            <legend>Dirección</legend>
+            <label for="calle">Calle:</label>
+            <!--value sirve para llenar un campo previo-->
+            <input type="text" name="calle" id="calle" value="Emiliano Zapata" required>
+            <br>
+            <label for="num_casa">Número:</label>
+            <input type="number" name="num_casa" id="num_casa" placeholder="ingresa el número de tu casa" required>
+            <br>
+            <label for="colonia">Colonia:</label>
+            <input type="text" name="colonia" id="colonia" required>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
