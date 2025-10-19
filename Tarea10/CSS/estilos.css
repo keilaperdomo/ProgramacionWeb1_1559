@@ -1,0 +1,95 @@
+#encabezado{
+    color: white;
+    background-color: rgb(214, 145, 168);
+    height: 80px;
+    /*El relleno es el espacio entre el contenido de un elemento y su borde*/
+    /*Se aplican las propiedades en sentido horario: top, right, bottom y left*/
+    padding: 50px 20px 25px;
+    /*El margen es el espacio entre el borde de un elemento con los demás elementos HTML*/
+    margin: 10px 30px 40px;
+
+    /*El borde es el contorno visual alrededor de nuestro relleno y contenido de un
+    elemento
+    Valores posibles para border-style:
+    (solid, dotted, dashed, double, groove, ridge, inset, outset, hidden y none)*/
+    border: 40px ridge rgb(248, 231, 231);
+    /*border-top-style:solid;*/
+    border-radius: 5%;
+    /*Se puede utilizar para crear efectos de sombra al rededor del borde un elemento,
+    se deben especificar los valores para el desplazamiento horizontal, 
+    desplazamiento-vertical, radio de desenfoque, radio de propagación y color*/
+    box-shadow: -5px 5px 10px 5px rgb(114, 79, 79);
+    /*con border box  se utiliza para que rellenos, margenes y bordes no agreguen espacio 
+    extra a lo que se declaro en el ancho y alto de nuestro contenedor*/
+    box-sizing: content-box;
+}
+
+.introduccion{
+    color: black;
+    background-color: rgb(207, 154, 171);
+    height: 200px;
+    padding: 20px ;
+    margin: 10px;
+    border: 3px groove rgb(153, 5, 79);
+    box-shadow: -5px 5px 10px 5px rgb(114, 79, 79);
+    box-sizing: content-box;
+}
+
+.introduccion p{
+    border: 3px dotted rgb(99, 1, 47);
+    height: 100px;
+    width: 500px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.introduccion span{
+    border: 2px double rgb(99, 1, 47);
+    height: 50px;
+    width: 100px;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+
+.texto--fuente{
+    background-color: rgb(172, 119, 137);
+    color: aliceblue;
+    border: 10px dotted rgb(99, 1, 47);
+    padding: 10px;
+    margin: 10px;
+}
+
+.propiedades--texto{
+    border: 3px solid rgb(99, 1, 47);
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.propiedades--texto h2{
+    color: aliceblue;
+    text-align: center;
+    border: 6px double rgb(88, 19, 51);
+    text-transform: capitalize;
+    text-decoration:none;
+    text-shadow: 2px 2px 8px rgb(172, 119, 137);
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.propiedades--texto p{
+    text-align: justify;
+    line-height: 1.2;
+}
+
+.propiedades--fuente{
+    border: 3px solid rgb(99, 1, 47);
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+}
