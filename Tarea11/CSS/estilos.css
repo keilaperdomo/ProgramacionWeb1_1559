@@ -1,0 +1,89 @@
+/*Selector HTML*/
+/*rem se basa en el html, es para tamaños uniformes en toda la página*/
+/*em se multiplica por su contenedor padre, si se quiere que un elemento 
+crezca proporcionalmente dentro de su contenedor */
+html{
+    /*tamaño base de fuente para todo el documento.*/
+    font-size: 62.5%; /*10px*/
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #f6d1d1, #c7e5d1);
+    color: rgb(75, 64, 78);
+}
+
+/*Orden para los estilos de los estados en los enlaces
+(LVFHA)*/
+
+/*Color del enlace normal, cuando aún no se ha visitado.*/
+a:link{
+    color: rgb(255, 244, 248);
+}
+
+/*Color del enlace ya visitado.*/
+a:visited{
+    color: rgb(95, 79, 99);
+}
+
+/*Cuando haces clic en un enlace o lo seleccionas con el teclado*/
+a:focus{
+    color: rgb(230, 214, 236);
+    background-color: rgb(117, 64, 117);
+    border: 0.2rem solid rgb(190, 150, 210);
+}
+
+/*Cuando el puntero del mouse pasa sobre el enlace.*/
+a:hover{
+    color: rgb(177, 118, 180);
+    background-color: rgb(255, 252, 250);
+    border: 0.2rem solid rgb(190, 150, 210);
+}
+
+/*uando presionas el enlace*/
+a:active{
+    color: rgb(122, 80, 160);
+    background-color: rgb(239, 224, 244);
+    text-decoration: none;
+    border: 0.3rem solid rgb(190, 150, 210);
+}
+
+#encabezado{
+    border:7px solid rgb(186, 160, 185);
+}
+
+#encabezado h1{
+    font-size: 2rem; /*40px*/
+    text-align: center;
+}
+
+.enlaces{
+    border: 0.1em solid;
+    font-size: 2em; /*15px*/
+}
+
+.estados-enlaces h2{
+    font-size: 2rem; /*30px*/
+    text-align: center;
+    border: 0.5rem dashed rgb(186, 160, 185);
+}
+
+.estados-enlaces ul{
+    border: 0.5rem solid rgb(245, 240, 245);
+    padding-left: 0;
+}
+
+.estados-enlaces ul li{
+    border: 0.6rem solid rgb(186, 160, 185);
+    /*list-style-type (disc, decimal, circle, square, lower-roman, 
+    lower-alpha, upper-alpha, none)*/
+    list-style-type:circle;
+    list-style-image: url('https://edube.org/uploads/media/default/0001/04/oedg_icon_regular.png');
+    /*(inside y outside)*/
+    list-style-position: inside;
+    margin: 0.4rem;
+    padding: 0.3rem;
+    line-height: 1.5;
+}
