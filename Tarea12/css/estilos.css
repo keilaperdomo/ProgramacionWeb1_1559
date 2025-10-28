@@ -1,0 +1,99 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to bottom, rgb(161, 107, 81), rgb(209, 171, 152));
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    height: 600vh;
+}
+
+#encabezado {
+    border: 0.10em outset rgb(255, 255, 255);
+    position: sticky; 
+    top: 0; 
+    width: 100%;
+}
+
+.moverlo {
+    font-size: xx-large;
+    font-family: "Dancing Script", sans-serif;
+    position: relative;
+    left: 15em;
+    bottom: 1.5em;
+    color: white;
+}
+
+.contenedor-logo {
+    width: 5%;
+    height: 7em;
+    /*border: 0.2em outset white;*/
+}
+
+.contenedor-logo img {
+    width: 200%;
+    height: 200%;
+    /*min-width max-width
+    min-height, max-height*/
+    object-fit: cover;
+    background-color: white;
+    object-position: center;
+    border: 0.1em inset white;
+    border-radius: 100%;
+}
+
+.elementos-pos {
+    border: 0.2em outset white;
+    padding: 1em;
+    position: relative;
+}
+
+.contenedor-img {
+    width: 15em;
+    height: 15em;
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.img-fantasma {
+    position: relative;
+    top: 15em;
+    left: 7em;
+}
+
+.img-leyendo {
+    position: absolute;
+    top: 0;
+    left: 10em;
+    z-index: 1;
+}
+
+.img-fantasma {
+    filter: blur(0.1em); /*desenfoque*/
+}
+
+.img-leyendo {
+    filter: contrast(1.5); 
+}
+
+.img-ardilla {
+    filter: grayscale(70%);
+}
+
+/*filter
+Permitir la manipulación de imágenes, ofreciendo una gama de efectos como: 
+*blur(): Aplica desenfoque
+*brightness(): Ajusta el brillo de un elemento
+*contrast(): Modifica el contraste
+*grayscale(): Convierte el elemento a escala de grises
+*invert(): Invierte los colores del elemento
+*sepia(): Aplica un efecto de tono sepia al elemento.*/
