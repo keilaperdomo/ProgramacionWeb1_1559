@@ -1,0 +1,71 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: radial-gradient(ellipse, rgb(109, 38, 38), rgb(124, 33, 48));
+    background-repeat: no-repeat;
+}
+
+.contenedor-grid{
+    color: aliceblue;
+    border: 0.2em solid rgb(24, 4, 4);
+    padding: 0.2em;
+    /*Convertir el contenedor en una cuadrícula*/
+    display: grid;
+    width: 30em;
+    height: 30em;
+
+    /*Se declaran las columna (tamaño) de la cuadrícula*/
+    /*Aceptan valores fijos, relativos, porcentajes, auto y 
+    se puede utilizar fr, para definir una fracción del espacio disponible*/
+
+    grid-template-columns: 5em 5em 5em;
+    /*Se declaran los renglones o filas de la cuadrícula*/
+    /*Aceptan valores fijos, relativos, porcentajes, auto y 
+    se puede utilizar fr, para definir una fracción del espacio disponible*/
+    grid-template-rows: 10em 10em;
+    /*Alinear items en la fila (Eje en línea)(start, end, center, strech)*/
+    justify-items: center;
+     /*Alinear items en la columna (Eje en línea)(start, end, center, strech)*/
+     align-items: center;
+     /*Shorthand: place-items: strech strech*/ 
+     /*Alinear la cuadrícula a lo largo del eje en línea(fila)
+     (start, end, center, strech, space-between, space-around y space-evenly)*/
+     justify-content:start;
+     /*Alinear la cuadrícula a lo largo del eje en bloque(columna)
+     (start, end, center, strech, space-between, space-around y space-evenly)*/
+     align-content: space-between;
+     gap: 1em;
+
+
+}
+
+.objeto-grid{
+    background-color: rgb(126, 61, 52);
+    border: 0.1em dashed white;
+}
+
+.contenedor-grid-1{
+    color: aliceblue;
+    border: 0.2em solid rgb(24, 4, 4);
+    padding: 0.2em;
+    /*Convertir el contenedor en una cuadrícula*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+}
+
+.objeto-grid-1{
+    background-color: rgb(124, 101, 101);
+    border: 0.1em dashed white;
+}
+
+.objeto-grid-1:nth-child(2){
+    color: rgb(0, 0, 0);
+    grid-column: 1/2;
+    grid-row: 1;
+}
