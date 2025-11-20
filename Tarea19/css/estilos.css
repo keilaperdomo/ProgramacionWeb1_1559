@@ -1,0 +1,105 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), pink);
+    background-repeat: no-repeat;
+}
+
+#encabezado{
+    border: 0.2em solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;  
+}
+
+#check{
+    display: none;
+}
+
+.abrir{
+    width: 8%;
+    height: auto;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: black;
+    color: wheat;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    transform: translateX(-50em);
+}
+
+.cerrar{
+    width: 8%;
+    height: auto;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: black;
+    color: wheat;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    transform: translateX(-70em);
+}
+
+.cerrar{
+    display: none;
+}
+
+#navegacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    width: 15%;
+    height: 100vh;
+    /*permite aplicar translaciones, rotaciones y 
+    escalas a un elemento HTML*/
+    transform: translateX(100%);
+    /*Se aplica una transición: propiedad tiempo funcion */
+    transition: transform 1s ease-in-out;
+    background-color: palevioletred;
+    color: aliceblue;
+    /*opacity: 50%;*/
+    justify-self: flex-start;
+}
+
+#navegacion a{
+   padding: 0.5;
+   text-decoration: none;
+   color: white;
+   text-align: center;
+}
+
+#navegacion a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/*Introducción del menú lateral*/
+/*El selector ~ afecta a un elemento que esta a la altura
+de otro, asu cuando la pseudoclase checked esta marcada
+aplica ciertos estilos*/
+
+#check:checked ~ #navegacion{
+    transform: translateX(0%);
+}
+
+/*Ocultar el botón abrir*/
+#check:checked ~ .abrir{
+    display: none;
+} 
+
+/* Mostrando el boton salir */
+#check:checked ~ .cerrar{
+    display: block;
+} 
+
+
