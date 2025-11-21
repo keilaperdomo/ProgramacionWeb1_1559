@@ -9,8 +9,6 @@ body{
     background-image: linear-gradient(to bottom, rgb(103, 129, 158), rgb(136, 157, 180));
 }
 
-
-
 #encabezado{
     border: 0.2em solid rgb(255, 255, 255);
     display: grid;
@@ -79,20 +77,38 @@ h1{
     text-align: center;
 }
 
+/* ==== SECCIÓN DE ÚLTIMO MOMENTO (scroll funcionando) ==== */
 .noticias-urgentes{
     grid-column: 5/7;
     border: 0.2em solid white;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;   /* título fijo + contenido con scroll */
     height: 30em;
-    overflow-y: auto;
 }
 
 .noticias-urgentes h2{
-    text-align: ce
+    text-align: center;
+    align-content: center;
+    padding: 0.5em;
+    position: sticky;
+    top: 0;
+    background-color: rgba(136, 157, 180, 0.95); /* para que no se mezcle al hacer scroll */
 }
 
+.noticias-urgentes .contenido-scroll{
+    overflow-y: auto;
+}
+
+.noticia-u{
+    border: 0.2em solid white;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(255, 255, 255);
+    align-items: center;
+    text-align: center;
+    height: 20em;
+}
+
+
+/* FOOTER */
 #pie-pagina{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -136,4 +152,3 @@ h1{
     display:inline-block;
     font-size: 1.1rem;
 }
-
