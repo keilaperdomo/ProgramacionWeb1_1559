@@ -77,12 +77,12 @@ h1{
     text-align: center;
 }
 
-/* ==== SECCIÓN DE ÚLTIMO MOMENTO (scroll funcionando) ==== */
+
 .noticias-urgentes{
     grid-column: 5/7;
     border: 0.2em solid white;
     display: grid;
-    grid-template-rows: auto 1fr;   /* título fijo + contenido con scroll */
+    grid-template-rows: auto 1fr;   
     height: 30em;
 }
 
@@ -92,7 +92,7 @@ h1{
     padding: 0.5em;
     position: sticky;
     top: 0;
-    background-color: rgba(136, 157, 180, 0.95); /* para que no se mezcle al hacer scroll */
+    background-color: rgba(136, 157, 180, 0.95); 
 }
 
 .noticias-urgentes .contenido-scroll{
@@ -108,7 +108,7 @@ h1{
 }
 
 
-/* FOOTER */
+
 #pie-pagina{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
